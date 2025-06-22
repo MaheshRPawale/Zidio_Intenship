@@ -1,0 +1,32 @@
+package com.zidio.zidioconnect.dto;
+
+import jakarta.validation.constraints.*;
+
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class RecruiterRequestDto {
+
+	 @NotNull(message = "User ID is required")
+	    @Positive(message = "User ID must be a positive number")
+	    private Long userId; // shared with User table
+
+	    @NotBlank(message = "Company name is required")
+	    @Size(max = 100)
+	    private String companyName;
+
+	    @NotBlank(message = "Recruiter name is required")
+	    @Size(max = 100)
+	    private String recruiterName;
+
+	    @NotBlank(message = "Recruiter email is required")
+	    @Email(message = "Email should be valid")
+	    private String recruiterEmail;
+
+	    @NotBlank(message = "Designation is required")
+	    @Size(max = 50)
+	    private String designation;
+}
