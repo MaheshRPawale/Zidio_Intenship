@@ -35,5 +35,5 @@ public class UserInfo {
 	private String password;
 	
 	@Column(nullable=false)
-	private String roles; // STUDENT, RECRUITER, ADMIN
+	private String rol; // STUDENT, RECRUITER, ADMIN
 }
