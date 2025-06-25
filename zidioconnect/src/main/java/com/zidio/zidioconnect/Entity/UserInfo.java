@@ -37,6 +37,4 @@ public class UserInfo {
 	@Column(nullable=false)
 	private String rol; // STUDENT, RECRUITER, ADMIN
 	
-	@Column
-	private String Address;
 }
