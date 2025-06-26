@@ -10,10 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 public class RecruiterRequestDto {
 
-	 @NotNull(message = "User ID is required")
-	    @Positive(message = "User ID must be a positive number")
-	    private Long userId; // shared with User table
-
+	
 	    @NotBlank(message = "Company name is required")
 	    @Size(max = 100)
 	    private String companyName;

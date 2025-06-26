@@ -1,21 +1,23 @@
 package com.zidio.zidioconnect.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Application {
 
-public class Application{
-@Id
-@GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-private Long id;
+    private String studentEmail;
 
-private String sudentEmail;
-private Long jobId;
+    private Long jobId;
 
-private String status;
-
+    private String status;
 }

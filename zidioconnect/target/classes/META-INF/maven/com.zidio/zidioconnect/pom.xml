@@ -64,11 +64,17 @@
     <artifactId>modelmapper</artifactId>
     <version>3.2.3</version>
 </dependency>
-		<dependency>
+	<!--	<dependency>
 			<groupId>com.CollageRegister</groupId>
 			<artifactId>GSM_Collage</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		</dependency>-->
+		
+	<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-mail</artifactId>
+	</dependency>
+
 		<dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
