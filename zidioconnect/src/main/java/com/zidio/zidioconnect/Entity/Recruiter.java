@@ -14,10 +14,7 @@ public class Recruiter {
 	   @Id
 	    private Long id; 
 
-	    @OneToOne
-	    @MapsId
-	    @JoinColumn(name = "user_id")
-	    private User user;
+	   
 
 	    @Column(nullable = false, length = 100)
 	    private String companyName;
