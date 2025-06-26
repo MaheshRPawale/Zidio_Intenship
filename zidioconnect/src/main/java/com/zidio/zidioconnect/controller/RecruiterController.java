@@ -20,18 +20,18 @@ public class RecruiterController {
 	 @Autowired
 	    private RecruiterService recruiterService;
 
-	    @PostMapping("/register")
-	    public ResponseEntity<RecruiterRequestDto> registerRecruiter(@Valid @RequestBody RecruiterRequestDto request) {
-	        return ResponseEntity.status(HttpStatus.CREATED).body(recruiterService.saveRecruiter(request));
+	 @PostMapping("/register")
+	    public ResponseEntity<RecruiterRequestDto> register(@RequestBody RecruiterRequestDto request) {
+	        return ResponseEntity.ok(recruiterService.saveRecruiter(request));
 	    }
 
 	    @GetMapping("/all")
-	    public ResponseEntity<List<RecruiterRequestDto>> getAllRecruiters() {
+	    public ResponseEntity<List<RecruiterRequestDto>> getAll() {
 	        return ResponseEntity.ok(recruiterService.getAllRecruiters());
 	    }
 
-	    @GetMapping("/{recruiterEmail}")
-	    public ResponseEntity<RecruiterRequestDto> getByEmail(@PathVariable String recruiterEmail) {
-	        return ResponseEntity.ok(recruiterService.getByRecruiterEmail(recruiterEmail));
+	    @GetMapping("/{email}")
+	    public ResponseEntity<RecruiterRequestDto> getByEmail(@PathVariable String email) {
+	        return ResponseEntity.ok(recruiterService.getByRecruiterEmail(email));
 	    }
 }
